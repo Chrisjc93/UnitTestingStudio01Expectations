@@ -45,7 +45,7 @@ describe("launchOutput", function(){
   })
 
   it('When passed a number that is NOT divisible by 2, 3, or 5, return "Rutabagas! That doesnt work."', function(){
-    let expected = 'Rutabagas! That doesnt work.'
+    let expected = "Rutabagas! That doesn't work."
     let actual = launchOutput(1)
     expect(expected).toEqual(actual)
   })

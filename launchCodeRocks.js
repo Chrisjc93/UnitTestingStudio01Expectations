@@ -1,65 +1,49 @@
-function launchMod235 (num){
-  if(num % 2 === 0 && num % 3 === 0 && num % 5 === 0){
-    return 'LaunchCode Rocks!';
+
+// function launchOutput(num){
+//   if(num % 2 === 0 && num % 3 === 0 && num % 5 === 0){
+//     return 'LaunchCode Rocks!';
+//   } else if (num % 2 === 0 && num % 3 === 0){
+//     return 'LaunchCode!';
+//   } else if (num % 3 === 0 && num % 5 === 0){
+//     return 'Code Rocks!';
+//   } else if (launchMod25(num)=== true){
+//     return 'Launch Rocks! (CRASH!!!!)';
+//   } else if (num % 3 === 0){
+//     return 'Code!';
+//   } else if (num % 5 === 0){
+//     return 'Rocks!';
+//   } else if (num % 2 === 0){
+//    return 'Launch!';
+//   } else {
+//     return 'Rutabagas! That doesnt work.';
+//   }
+// }
+
+function launchOutput(num){ 
+  let output = '';
+
+  if(num%2 ===0){
+    output += "Launch";
   }
-}
-function launchMod23 (num){
-  if (num % 2 === 0 && num % 3 === 0){
-    return 'LaunchCode!';
+  if(num%3 ===0){
+    output += "Code";
   }
-}
+  if(num%5 ===0){
+    if(output){// if output is not empty      
+      output += " Rocks";
+    } else {
+      output += "Rocks";
+    }
 
-function launchMod35 (num){
-  if (num % 3 === 0 && num % 5 === 0){
-    return 'Code Rocks!';
   }
-}
+  if(!output){
+    return "Rutabagas! That doesn't work."
+  } else if (output === 'Launch Rocks'){
+    return output + '! (CRASH!!!!)'
 
-function launchMod25 (num){
-  if (launchMod2(num) === 'Launch!' && launchMod5(num) === 'Rocks!'){
-    return true
-  }
-}
-
-function launchMod3 (num){
-  if (num % 3 === 0){
-    return 'Code!';
-  }
-}
-
-function launchMod5 (num){
-  if (num % 5 === 0){
-    return 'Rocks!';
-  }
-}
-
-function launchMod2 (num){
-  if(num % 2 === 0){
-   return 'Launch!';
-  }
-}
-
-
-
-function launchOutput(num){
-  if(num % 2 === 0 && num % 3 === 0 && num % 5 === 0){
-    return 'LaunchCode Rocks!';
-  } else if (num % 2 === 0 && num % 3 === 0){
-    return 'LaunchCode!';
-  } else if (num % 3 === 0 && num % 5 === 0){
-    return 'Code Rocks!';
-  } else if (launchMod25(num)=== true){
-    return 'Launch Rocks! (CRASH!!!!)';
-  } else if (num % 3 === 0){
-    return 'Code!';
-  } else if (num % 5 === 0){
-    return 'Rocks!';
-  } else if (num % 2 === 0){
-   return 'Launch!';
   } else {
-    return 'Rutabagas! That doesnt work.';
+    return output + "!";
   }
 }
-
 
 module.exports = launchOutput;
